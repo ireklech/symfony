@@ -1,0 +1,38 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Koszyk{% endblock %}
+
+{% block body %}
+<h1> {{ block('title') }} </h1>
+
+<table class="table">
+	
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nazwa produktu</th>
+			<th>Cena</th>
+			<th>Ilosc</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		{% for id ,product in products %}
+			<tr>
+				<td>{{ id }} </td>
+				<td>{{ product.name }} </td>
+				<td>{{ product.price }} </td>
+				<td>{{ product.quantity}}</td>
+			</tr>
+		{% else %}	
+			<tr>
+
+				<td colspan="4">Nie znaleziono produktów.</td>
+			</tr>
+		{% endfor %}	
+	</tbody>
+
+	
+</table>
+
+{% endblock %}
