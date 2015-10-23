@@ -24,7 +24,9 @@
 				<td>{{ product.name }} </td>
 				<td>{{ product.price }} </td>
 				<td>{{ product.description }} </td>
-				<td> <a class ="btn btn-primary btn-sm" href="{{ path('product_add_to_cart' ,{'id': product.id}) }}" >Dodaj do koszyka </a> </td>
+				<td> <a class ="btn btn-primary btn-sm" href="
+				{{ path('product_add_to_cart' ,{'id': product.id}) }}" 
+						>Dodaj do koszyka </a> </td>
 			</tr>
 		{% else %}	
 			<tr>
