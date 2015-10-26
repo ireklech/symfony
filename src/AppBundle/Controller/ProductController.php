@@ -18,6 +18,8 @@ class ProductController extends Controller{
 		]);
 	}
 
+	//TEST GITLAB
+
    /**
 	* @Route("/{id}/add-to-cart", name="product_add_to_cart")
 	* @Template()
